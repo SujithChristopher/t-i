@@ -1,0 +1,191 @@
+\documentclass{article}
+\usepackage{layout}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\graphicspath{ {./src/} }
+
+\begin{document}
+\title{Assignment 3}
+\maketitle
+
+
+\section{Question 1A}
+
+Force $f(t)$ acting on the mass is the input and its acceleration $ a(t)$ is the output.
+
+\begin{equation*}
+    \begin{aligned}
+        a(t) = \frac{f(t)}{m}
+    \end{aligned}
+\end{equation*}
+
+Taking the laplace transform of the equation above
+
+\begin{equation*}
+    \begin{aligned}
+        A(S) = \frac{F(S)}{m}
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        A(S) = \frac{1}{m} F(S)
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        H(S) = \frac{A(S)}{F(S)} = \frac{1}{m}
+    \end{aligned}
+\end{equation*}
+
+Inverse laplace transform and impulse response of the equation above
+
+% \begin{equation*}
+%     \begin{aligned}
+%         h(t) = \frac{1}{m} \int_{0}^{\infty} e^{-st} dt
+%     \end{aligned}
+% \end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        h(t) = \frac{1}{m} \delta(t)
+    \end{aligned}
+\end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         H(s) = \frac{1}{ms}
+%     \end{aligned}
+% \end{equation*}
+
+The system is a zero order and static system.
+
+\section{Question 1B}
+Force $f(t)$ acting on the mass is the input and its velocity $ v(t)$ is the output.
+
+\begin{equation*}
+    \begin{aligned}
+        v(t) = \int_{0}^{t} \frac{f(t)}{m} dt
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        v(t) = \frac{1}{m} \int_{0}^{t} f(t) dt
+    \end{aligned}
+\end{equation*}
+
+Converting to laplace domain
+
+% \begin{equation*}
+%     \begin{aligned}
+%         V(s) = \frac{1}{m} \int_{0}^{\infty} f(t) e^{-st} dt
+%     \end{aligned}
+% \end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        V(S) = \frac{1}{m} F(S)
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        H(S) = \frac{V(S)}{F(S)} = \frac{1}{ms}
+    \end{aligned}
+\end{equation*}
+
+Inverse laplace transform and impulse response of the equation above
+
+\begin{equation*}
+    \begin{aligned}
+        h(t) = \frac{1}{ms} u(t)
+    \end{aligned}
+\end{equation*}
+
+The system is a first order and dynamic system.
+
+
+
+% \begin{equation*}
+%     \begin{aligned}
+%         v(t) = \frac{1}{m} \left[ \frac{f(t)}{2} t^2 \right]_0^t
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         v(t) = \frac{1}{2m} f(t) t^2
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         H(s) = \frac{1}{2ms^2}
+%     \end{aligned}
+% \end{equation*}
+
+\section{Question 1C}
+Force $f(t)$ acting on the mass is the input and its position $ x(t)$ is the output.
+
+\begin{equation*}
+    \begin{aligned}
+        x(t) = \frac{1}{m}\int_{}^{} \int_{}^{} F(S)
+    \end{aligned}
+\end{equation*} 
+
+Converting it to laplace domain
+
+\begin{equation*}
+    \begin{aligned}
+        X(S) = \frac{F(S)}{m s^2} 
+    \end{aligned}
+\end{equation*}
+
+Inverse laplace transform and impulse response of the equation above
+
+\begin{equation*}
+    \begin{aligned}
+        h(t) = \frac{t}{m}
+    \end{aligned}
+\end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         X(S) = 
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         x(t) = \frac{1}{2m} \int_{0}^{t} f(t) t^2 dt
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         x(t) = \frac{1}{2m} \left[ \frac{f(t)}{3} t^3 \right]_0^t
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         x(t) = \frac{1}{6m} f(t) t^3
+%     \end{aligned}
+% \end{equation*}
+
+% \begin{equation*}
+%     \begin{aligned}
+%         H(s) = \frac{1}{6ms^3}
+%     \end{aligned}
+% \end{equation*}
+The system is a second order and dynamic system.
+
+
+
+\end{document}
