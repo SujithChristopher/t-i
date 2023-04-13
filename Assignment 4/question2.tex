@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{layout}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\graphicspath{ {./src/} }
+
+\begin{document}
+
+\section*{Question 2}
+
+\begin{center}
+    \includegraphics*[scale=0.5]{lvdt.png}
+\end{center}
+
+Given the LVDT, the output $v_o(t)$ and input $v_p(t)$ voltages are given by:
+
+\begin{equation*}
+    v_o(t) = k . x . \sin(\omega_p t + \phi) 
+    % \\v_p(t) = \sin(\omega_p t) 
+\end{equation*}
+
+\begin{equation*}
+    v_p(t) = \sin(\omega_p t) 
+\end{equation*}
+
+
+And $L_p = 4mH, L_s = 2mH, R_p = 100 \Omega,  R_s = 50 \Omega$ find the output impedance and the frequency $\omega_p$ at which $\phi < 0.1\pi$\newline
+
+
+
+To find the output impedance, we have to short the voltage sources and open the load resistance
+\begin{center}
+    \includegraphics*[scale=0.7]{ckt.png}
+\end{center}
+
+Output impedance is given by:
+\begin{equation*}
+    \mathcal{Z} = \sqrt{R_s^2 X_s^2}
+\end{equation*}
+
+\end{document}
