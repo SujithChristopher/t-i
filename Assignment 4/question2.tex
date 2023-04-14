@@ -28,7 +28,9 @@ Given the LVDT, the output $v_o(t)$ and input $v_p(t)$ voltages are given by:
 \end{equation*}
 
 
-And $L_p = 4mH, L_s = 2mH, R_p = 100 \Omega,  R_s = 50 \Omega$ find the output impedance and the frequency $\omega_p$ at which $\phi < 0.1\pi$\newline
+And $L_p = 4mH, L_s = 2mH, R_p = 100 \Omega,
+R_s = 50 \Omega$ find the output impedance and the frequency 
+$\omega_p$ at which $\phi < 0.1\pi$\newline
 
 
 
@@ -39,7 +41,30 @@ To find the output impedance, we have to short the voltage sources and open the 
 
 Output impedance is given by:
 \begin{equation*}
-    \mathcal{Z} = \sqrt{R_s^2 X_s^2}
+    \mathcal{Z} = \sqrt{R_s^2  + X_L^2}
 \end{equation*}
+
+\begin{equation*}
+    \mathcal{Z} = \sqrt{R_s^2  + (j\omega L_s)^2}
+\end{equation*}
+
+\begin{equation*}
+    \mathcal{Z} = \sqrt{R_s^2  - \omega^2 L_s^2}
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+    \phi = \tan^{-1}\frac{R_s}{\omega L_s}
+\end{equation*}
+
+Since we know that $\phi < 0.1\pi$, we can solve for $\omega_p$:
+\begin{equation*}
+    \omega_p < \frac{R_s}{L_s} \tan(0.1\pi)
+\end{equation*}
+
+\begin{equation*}
+    \omega_p < 8122.99\, rad/s
+\end{equation*}
+
 
 \end{document}
