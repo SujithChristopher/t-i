@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage{layout}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\graphicspath{ {./src/} }
+\begin{document}
+
+\title{Assignment 6}
+\date{}
+\maketitle
+
+\section*{Question 1}
+
+Given:
+\begin{itemize}
+\item Cross section of the rectangle 20 mm x 5 mm
+\item Two strain gauges attached along the axis and transverse 
+direction $1231 \mu\, $strain and $-431\mu\, $strain
+\end{itemize} 
+
+Axial strain $ \varepsilon_a = 1231 \mu\, $strain,
+Transversal strain $ \varepsilon_t = -431\mu\, $strain \\
+
+Poison ratio is given by:
+\begin{equation*}
+    \nu    = -\frac{ \varepsilon_t}{\varepsilon_a}
+\end{equation*}
+
+\begin{equation*}
+    \nu = -(\frac{-431 \mu }{1231 \mu })
+\end{equation*}
+
+
+\begin{equation*}
+    % \frac{- \varepsilon_t}{\vareosilon_a} = \frac{1231}{-431}
+    \nu = -(\frac{-431}{1231})
+\end{equation*}
+
+Poison's ratio is:
+\begin{equation*}
+    \nu    = 0.35
+\end{equation*}
+
+
+Stress applied on the strain gauge is given by:
+
+\begin{equation*}
+    \sigma = \frac{F}{A}
+\end{equation*}
+
+\begin{equation*}
+    \sigma = \frac{400}{20 mm \times 5 mm}
+\end{equation*}
+
+Young's modulus is given by:
+
+\begin{equation*}
+    E = \frac{\sigma}{\varepsilon}
+\end{equation*}
+
+\begin{equation*}
+    E = \frac{400}{20 * 5 * 10^{-6} * 1231 * 10^{-6}}
+\end{equation*}
+
+
+\begin{equation*}
+    E = 3.25 G Pa
+\end{equation*}
+
+
+\section*{Question 2}
+
+Given the following for a strain gauge:
+\begin{itemize}
+    \item Nominal resistance: $R = 150 \Omega$
+    \item Gauge factor: $G = 2.5$
+    \item $V_{in} = 3.3 V$
+    \item $V_{out} = 10mV$
+\end{itemize}
+
+\begin{center}
+    \includegraphics*[scale=0.5]{straingauge.png}
+\end{center}
+
+Whereas $R_1 = R_2 = R_3 = R_4 = R$
+
+\begin{equation*}
+    \frac{V_{out}}{V_{in}} = \frac{\Delta R}{ 4R + \Delta R} \, or \,  \frac{\Delta R}{ 4R}
+\end{equation*}
+
+\begin{equation*}
+    \frac{10mV}{3.3V} = \frac{\Delta R}{ 4R}
+\end{equation*}
+
+\begin{equation*}
+    \frac{10*10^{-3}}{3.3} = \frac{\Delta R}{ 4*150}
+\end{equation*}
+
+\begin{equation*}
+    \Delta R = 1.81 \Omega
+\end{equation*}
+
+We know that $\frac{\Delta R}{R} = G \varepsilon $
+
+\begin{equation*}
+    \varepsilon = \frac{\Delta R}{GR}
+\end{equation*}
+
+
+
+Bringing to a common equation that can be used for other two cases:
+
+\begin{equation*}
+    \varepsilon = \frac{\Delta R}{2.5*150}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon = \frac{\Delta R}{375}
+\end{equation*}
+
+We know that $\Delta R = 1.81 \Omega$
+
+\begin{equation*}
+    \varepsilon = \frac{1.81}{375}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon = 0.0048
+\end{equation*}
+
+Case 2:
+
+if two strain gauges are attached, such that the strain 
+experienced by one strain gauge is $\varepsilon$ and the other is$ - \varepsilon$
+
+\begin{equation*}
+    \frac{V_{out}}{V_{in}} = \frac{\Delta R}{ 2R}
+\end{equation*}
+
+\begin{equation*}
+    \frac{10*10^{-3}}{3.3} = \frac{\Delta R}{ 2*150}
+\end{equation*}
+
+\begin{equation*}
+    \Delta R = 0.91 \Omega
+\end{equation*}
+
+Therefore the strain is given by:
+
+\begin{equation*}
+    \varepsilon = \frac{0.91}{375}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon = 0.0024
+\end{equation*}
+
+Case 3:
+if four strain gauges are attached, such that the strain
+experienced by two strain gauge is $\varepsilon$ and the other two is$ - \varepsilon$
+
+\begin{equation*}
+    \frac{V_{out}}{V_{in}} = \frac{\Delta R}{ R}
+\end{equation*}
+
+\begin{equation*}
+    \frac{10*10^{-3}}{3.3} = \frac{\Delta R}{ 150}
+\end{equation*}
+
+\begin{equation*}
+    \Delta R = 0.45 \Omega
+\end{equation*}
+
+Therefore the strain is given by:
+
+\begin{equation*}
+    \varepsilon = \frac{0.45}{375}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon = 0.0012
+\end{equation*}
+
+\end{document}
